@@ -256,5 +256,5 @@ Next steps:
 - Start contributing to open-source AI projects
 - Share what you built on LinkedIn and GitHub
 
-See → [projects.md](./projects.md) for a full list of project ideas at each level.
+ 
 See → [resources.md](./resources.md) for courses, videos, and certifications.
