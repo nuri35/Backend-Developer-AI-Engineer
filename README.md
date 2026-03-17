@@ -1,71 +1,155 @@
-# Backend Developer to AI Engineer
+# Backend Developer → AI Engineer
 
-A structured, self-paced roadmap for backend developers transitioning into AI Engineering. This guide bridges the gap between traditional backend development and the emerging field of AI-powered application development.
+![No Python Required](https://img.shields.io/badge/No_Python_Required-success?style=flat)
+![No ML Training](https://img.shields.io/badge/No_ML_Training-important?style=flat)
+![TypeScript](https://img.shields.io/badge/Node.js-TypeScript-3178c6?style=flat&logo=typescript)
+![NestJS](https://img.shields.io/badge/NestJS-focused-E0234E?style=flat&logo=nestjs)
+![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat)
+![License MIT](https://img.shields.io/badge/license-MIT-blue?style=flat)
 
-## Who Is This For?
+> **"An AI engineer is first and foremost an engineer. The AI part comes second."**
+> — Alexey Grigorev (based on analysis of 1,765 real AI job postings)
 
-You're a backend developer who already knows how to build APIs, work with databases, and deploy services. Now you want to build intelligent applications powered by LLMs, vector databases, and AI agents — without starting from scratch.
+A practical, opinionated roadmap for **backend developers** who want to integrate AI into their systems — using ready-made models like Claude or GPT-4, **without training ML models from scratch** and **without switching to Python**.
 
-## What You'll Learn
+---
 
-- **LLM Fundamentals** — How large language models work under the hood
-- **Prompt Engineering** — Techniques to get reliable, structured outputs from LLMs
-- **Context Engineering** — Managing context windows, memory, and state
-- **RAG (Retrieval-Augmented Generation)** — Grounding LLM responses in your own data
-- **Vector Databases & Embeddings** — Semantic search and similarity matching
-- **AI Agents & Tool Use** — Building autonomous agents that call APIs and use tools
-- **Fine-Tuning & Model Customization** — Adapting models to your domain
-- **LLMOps & Production** — Deploying, monitoring, and scaling AI applications
-- **Evaluation & Testing** — Measuring quality and preventing regressions
-- **AI Safety & Ethics** — Building responsible AI systems
+## Who is this for?
 
-## Repository Structure
+This roadmap is for you if:
+
+- You are a backend developer with Node.js, NestJS, or TypeScript experience
+- You want to add AI features to your backend systems
+- You do **not** want to become a Machine Learning Engineer
+- You want to use existing LLMs (Claude, GPT-4, Gemini) as services in your architecture
+- You already understand APIs, databases, queues, and async patterns
+
+You do **not** need:
+- Python knowledge
+- Math or statistics background
+- Experience with model training or fine-tuning
+
+---
+
+## What you will learn
+
+| # | Topic | Why it matters |
+|---|-------|----------------|
+| 01 | [LLM Fundamentals](./topics/01-llm-fundamentals.md) | Understand how the AI you are calling actually works |
+| 02 | [Prompt Engineering](./topics/02-prompt-engineering.md) | Write instructions that give consistent, reliable outputs |
+| 03 | [Context Engineering](./topics/03-context-engineering.md) | Manage what goes into the context window efficiently |
+| 04 | [LLM API Integration](./topics/04-llm-api-integration.md) | Call OpenAI and Anthropic APIs properly in TypeScript |
+| 05 | [Embeddings](./topics/05-embeddings.md) | Turn text into vectors for semantic search |
+| 06 | [Vector Databases](./topics/06-vector-databases.md) | Store and search embeddings at scale |
+| 07 | [RAG Pipeline](./topics/07-rag-pipeline.md) | Connect LLMs to your own data |
+| 08 | [Streaming](./topics/08-streaming.md) | Stream LLM responses to users in real time |
+| 09 | [Tool Calling & MCP](./topics/09-tool-calling.md) | Let the AI use your backend services as tools |
+| 10 | [Agent Patterns](./topics/10-agent-patterns.md) | Build systems where AI takes multi-step actions |
+| 11 | [Evaluation](./topics/11-evaluation.md) | Measure and improve AI output quality |
+| 12 | [Observability](./topics/12-observability.md) | Monitor traces, costs, and latency in production |
+| 13 | [Production Patterns](./topics/13-production-patterns.md) | Make AI systems reliable, scalable, and safe |
+| 14 | [Cost Management](./topics/14-cost-management.md) | Control and optimize LLM API spending |
+
+---
+
+## Learning path (8 weeks)
+
+```
+Week 1 → LLM Fundamentals + First API call
+Week 2 → Prompt Engineering + Context Engineering
+Week 3 → Embeddings + Vector Databases
+Week 4 → RAG Pipeline
+Week 5 → Tool Calling + Agent Patterns
+Week 6 → LangGraph + Multi-Agent + MCP
+Week 7 → Evaluation + Observability
+Week 8 → Production Patterns + Cost Management
+```
+
+Full weekly plan with resources → [roadmap.md](./roadmap.md)
+
+---
+
+## The 6-Layer AI Backend Framework
+
+When you add AI to a backend system, think of it as new layers on top of what you already know:
+
+```
+Layer 6: Defense           → guardrails, prompt injection, security
+Layer 5: AI Systems        → agents, multi-agent, human-in-the-loop
+Layer 4: AI Infrastructure → vector DB, embeddings, RAG  ← YOU ADD THIS
+─────────────────────────────────────────────────────────
+Layer 3: Production        → retry, circuit breaker, rate limiting (you know this)
+Layer 2: Business Logic    → services, validation (you know this)
+Layer 1: Foundation        → APIs, auth, databases (you know this)
+```
+
+You already have layers 1–3. This roadmap teaches you layers 4–6.
+
+---
+
+## Your advantage as a backend developer
+
+Because you already know backend engineering, you understand:
+
+- REST API design and microservice architecture
+- PostgreSQL, Redis, and async queue systems (RabbitMQ)
+- Error handling, retry logic, and circuit breakers
+- Docker, CI/CD, and production deployment
+- Observability and monitoring
+
+Most AI engineers who come from a research background struggle with production engineering. You already have this. You just need to add the AI layer on top.
+
+---
+
+## Repository structure
 
 ```
 backend-to-ai-engineer/
-├── README.md                # You are here
-├── roadmap.md               # Full topic list with learning path
-├── topics/                  # Deep dives into each topic
+├── README.md
+├── roadmap.md
+├── topics/
 │   ├── 01-llm-fundamentals.md
 │   ├── 02-prompt-engineering.md
 │   ├── 03-context-engineering.md
-│   ├── 04-rag-systems.md
-│   ├── 05-vector-databases.md
-│   ├── 06-ai-agents.md
-│   ├── 07-fine-tuning.md
-│   ├── 08-llmops.md
-│   ├── 09-evaluation-testing.md
-│   └── 10-safety-ethics.md
-├── resources.md             # Courses, videos, certifications
-├── projects.md              # Hands-on projects to build
-└── CONTRIBUTING.md          # How to contribute
+│   ├── 04-llm-api-integration.md
+│   ├── 05-embeddings.md
+│   ├── 06-vector-databases.md
+│   ├── 07-rag-pipeline.md
+│   ├── 08-streaming.md
+│   ├── 09-tool-calling.md
+│   ├── 10-agent-patterns.md
+│   ├── 11-evaluation.md
+│   ├── 12-observability.md
+│   ├── 13-production-patterns.md
+│   └── 14-cost-management.md
+├── resources.md
+├── projects.md
+└── CONTRIBUTING.md
 ```
 
-## How to Use This Repo
+---
 
-1. **Start with [roadmap.md](roadmap.md)** to see the full learning path
-2. **Work through [topics/](topics/)** in order — each builds on the previous
-3. **Build the [projects](projects.md)** to solidify your understanding
-4. **Use [resources.md](resources.md)** for supplementary learning materials
+## Sources
 
-## Quick Start — Your Backend Skills Map to AI Engineering
+Built by combining research from:
 
-| You Already Know | AI Engineering Equivalent |
-|---|---|
-| REST APIs | LLM API integration (OpenAI, Anthropic, etc.) |
-| Database queries | Vector similarity search |
-| Request/response cycles | Prompt → completion pipelines |
-| Middleware & interceptors | Guardrails & output validation |
-| Caching (Redis) | Semantic caching, KV caches |
-| Message queues | Agent orchestration & tool calling |
-| CI/CD pipelines | LLMOps evaluation pipelines |
-| Logging & monitoring | LLM observability (traces, token usage) |
-| Integration testing | LLM evaluation & regression testing |
+- [alexeygrigorev/ai-engineering-field-guide](https://github.com/alexeygrigorev/ai-engineering-field-guide) — 1,765 real AI job postings
+- [daveebbelaar/ai-cookbook](https://github.com/daveebbelaar/ai-cookbook) — AI Engineer Roadmap 2026
+- [Codebasics — AI Engineering Fast Track for SWEs 2026](https://codebasics.io)
+- [roadmap.sh/ai-engineer](https://roadmap.sh/ai-engineer)
+- [zenvanriel.com — Backend Developer to AI Engineer](https://zenvanriel.com/learning-path/backend-developer-to-ai-engineer/)
+- [leverage.to — AI Engineering Patterns](https://www.leverage.to/learn/dev/ai_engineering_patterns)
+- [scrimba.com — The AI Engineer Path](https://scrimba.com/the-ai-engineer-path-c02v)
 
-## Contributing
+---
 
-Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+## Timeline
+
+> You can go from backend developer to productive AI engineer in **2–3 months**.
+> You already have all the engineering skills. You just need to learn how they apply to AI.
+
+---
 
 ## License
 
-This project is licensed under the MIT License.
+MIT — free to use, share, and build upon.
