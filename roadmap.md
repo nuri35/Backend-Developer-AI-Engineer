@@ -257,4 +257,4 @@ Next steps:
 - Share what you built on LinkedIn and GitHub
 
  
-See → [resources.md](./resources.md) for courses, videos, and certifications.
+ 
