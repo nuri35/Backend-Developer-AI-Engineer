@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(find /c/Users/Nurie/OneDrive/Masaüstü/projects/Backend-Developer-AI-Engineer -maxdepth 2 -type f -name package.json -o -name pyproject.toml -o -name setup.py -o -name README* -o -name *.toml -o -name *.yaml -o -name *.yml)",
-      "Bash(git fetch:*)",
-      "WebFetch(domain:api.github.com)"
-    ]
-  }
-}
